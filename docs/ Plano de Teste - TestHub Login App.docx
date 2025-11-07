@@ -1,0 +1,55 @@
+Plano de Teste - TestHub Login App
+Autor: Brenda Nunes
+Projeto: Portfólio QA Manual
+Data: 07/11/2025
+
+1. Introdução
+Este plano de teste tem como objetivo descrever as estratégias, escopo e cenários de testes aplicados à aplicação fictícia TestHub Login App. O projeto foi desenvolvido com fins educacionais e fazer parte do meu portfólio de QA, demonstrando boas práticas de planejamento e execução de testes manuais.
+2. Objetivo
+Garantir que a funcionalidade de login da aplicação TestHub Login App funcione corretamente, atendendo às regras de negócio e comportamentos esperados. Os testes serão executados de forma manual e baseados em cenários positivos e negativos.
+3. Escopo
+Funcionalidade testada: Login de usuário.
+
+A aplicação contém os seguintes arquivos:
+    - index.html (Tela de Login)
+    - dashboard.html (Tela de sucesso após login)
+    - style.css (Folha de estilo)
+    - script.js (Lógica de validação de login)
+
+4. Estratégia de Teste
+Os testes serão realizados manualmente no ambiente local, utilizando o navegador Google Chrome e a extensão Live Server do VS Code. Os casos de teste foram definidos com base nas regras de negócio descritas no escopo do projeto.
+5. Ambiente de Teste
+    - Sistema Operacional: Windows 10 ou superior
+    - Navegador: Google Chrome (versão atual)
+    - Editor: Visual Studio Code
+    - Extensão: Live Server
+
+
+6. Regras de Negócio
+    •	R1 - O sistema só aceita o usuário 'qa-user' e a senha '123456'.
+    •	R2 - Caso o usuário ou senha estejam incorretos, o sistema exibirá a mensagem 'Usuário ou senha inválidos.'.
+    •	R3 - Campos obrigatórios: caso algum campo esteja vazio, o sistema exibirá 'Preencha todos os campos.'.
+    •	R4 - Login válido redireciona o usuário para a tela dashboard.html.
+    •	R5 - O campo de senha deve mascarar os caracteres digitados.
+7. Massa de Teste
+Tipo de Usuário	Usuário	Senha	Resultado Esperado
+Válido	qa_user	123456	Login com sucesso
+Inválido	qa_user	senha_errada	Mensagem de erro
+Inexistente	teste	123456	Mensagem de erro
+Campos vazios	(vazio)	(vazio)	Mensagem obrigatória
+
+8. Casos de Teste
+    ID	Cenário	Pré-condição	Passos	Resultado Esperado
+    CT-001	Login com credenciais válidas	Usuário cadastrado	1. Acessar a página de login
+    2. Inserir 'qa_user' e '123456'
+    3. Clicar em 'Entrar'	Redirecionar para dashboard.html
+    CT-002	Login com senha incorreta	Usuário cadastrado	1. Inserir 'qa_user' e senha incorreta
+    2. Clicar em 'Entrar'	Exibir mensagem 'Usuário ou senha inválidos.'
+    CT-003	Login com campos vazios	Nenhuma	1. Deixar os campos em branco
+    2. Clicar em 'Entrar'	Exibir mensagem 'Preencha todos os campos.'
+    CT-004	Login com usuário inexistente	-	1. Inserir 'user_teste' e '123456'
+    2. Clicar em 'Entrar'	Exibir mensagem 'Usuário ou senha inválidos.'
+    CT-005	Máscara de senha	-	1. Digitar no campo senha	Os caracteres devem estar mascarados
+
+9. Conclusão
+O plano de teste apresentado descreve a abordagem aplicada para validar a funcionalidade de login da aplicação TestHub Login App. O projeto tem caráter educacional e demonstra as práticas utilizadas em um processo de QA manual, incluindo planejamento, execução e registro de evidên
