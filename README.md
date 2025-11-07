@@ -74,9 +74,6 @@ Pasta: `/evidences`
 2. Abra o arquivo `index.html`  
 3. Clique com o **botão direito → Open with Live Server**  
 4. A aplicação abrirá no navegador  
-```
-[http://127.0.0.1:5500/index.html](http://127.0.0.1:5500/index.html)
-```
 5. Execute os testes manuais conforme os cenários descritos
 
 ## Conclusão
