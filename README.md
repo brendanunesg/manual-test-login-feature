@@ -87,7 +87,6 @@ Ela simula uma funcionalidade real de autenticação, permitindo praticar:
 - Execução e registro de resultados  
 - Análise de bugs e evidências  
 
---
 
 ## Autora
 
